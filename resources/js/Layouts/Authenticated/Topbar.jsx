@@ -1,5 +1,6 @@
 import React from 'react'
 import { useState, useRef } from 'react'
+import {Link} from '@inertiajs/inertia-react'
 
 export default function Topbar() {
     const [dropdownOpen, setDropdownOpen] = useState(true)
@@ -29,7 +30,7 @@ export default function Topbar() {
                                 ref={dropdownTarget}>
                                 <a href="#!" className="transition-all hover:bg-sky-100 p-4">Dashboard</a>
                                 <a href="#!" className="transition-all hover:bg-sky-100 p-4">Settings</a>
-                                <a href="sign_in.html" className="transition-all hover:bg-sky-100 p-4">Sign Out</a>
+                                <Link href={route('prototype.login')} className="transition-all hover:bg-sky-100 p-4">Sign Out</Link>
                             </div>
                         </div>
             </div>
